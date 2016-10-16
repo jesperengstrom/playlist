@@ -18,6 +18,12 @@ var next = function(){
 	console.log(myPlaylist.getCurrent());
 };
 
+var prev = function(){
+	document.getElementById('info').innerHTML = "<h2>Nu spelas:<br />" + myPlaylist.getCurrent().title + " av " + myPlaylist.getCurrent().artist + "</h2>";
+	console.log(myPlaylist.getCurrent());
+};
+
+document.getElementById("prev").addEventListener("click", prev);
 document.getElementById("play").addEventListener("click", play);
 document.getElementById("stop").addEventListener("click", stop);
 document.getElementById("next").addEventListener("click", next);
